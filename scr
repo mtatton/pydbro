@@ -1,0 +1,40 @@
+  1 #!/usr/bin/expect -f
+  2 # function for interaction
+  3
+  4 proc fnc_inter { p_exp p_send } {
+  5   expect $p_exp
+  6   send "$p_send\r"
+  7   sleep 2
+  8 }
+  9
+ 10 proc fnc_scr_cmd_mode { } {
+ 11   send "\x01"
+ 12   send ":"
+ 13 }
+ 14
+ 15 set timeout 10
+ 16 spawn bash
+ 17
+ 18 fnc_inter ">" "screen -S test"
+ 19 fnc_inter ">" "echo This is screen"
+ 20 fnc_inter ">" "echo HELP"
+ 21 fnc_scr_cmd_mode
+ 22 fnc_inter ":" "hardcopy"
+ 23 fnc_inter ">" "exit"
+ 24 fnc_inter ">" "exit"
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+test002.sh [+]                                                                                 22,24          All
+
