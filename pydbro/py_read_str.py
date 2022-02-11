@@ -41,7 +41,7 @@ def read_str(screen, col, p_banner, strdef="", passwd=0):
             vstr = vstr[:-1]
         else:
             vstr += chr(ch)
-        if passwd == 1:
+        if passwd == 0:
             screen.addstr(vstr)
         else:
             screen.addstr("*" * len(vstr))
