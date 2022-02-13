@@ -80,31 +80,25 @@ def prn_intro_scr():
 str_help = """
   Help Keyboard Controls:
   
-  ?   - this help
+  ?   - this help        $ - connection information   r   - reread 
   
-  $   - connection information
-  j   - move down
-  k   - move up
-  h   - move left
-  l   - move right
-  L   - shift columns right
-  H   - shift columns left
-  0   - go to upper left table corner
-  G   - go to lower right table corner
-  n   - next page of records
-  u   - previous page of records
-  s   - sort ascending by current column
-  S   - sort descending by current column
-  f   - filter (enter claus after where ... )
-  tab - toggle left / right panel (tables, table content)
-  m   - move rows view by 1 page down (tables list)
-  i   - move rows view by 1 page up (tables list)
-  r   - reread
-  e   - edit current cell
-  d   - delete current row
-  a   - add new row
-  X   - reset view (filter, sort) on current table
-  @   - scroll current row to the top
+  tab      - toggle left / right panel (tables, table content)
+
+  j,k,h,l  - move down, up, left, right
+  L,H      - shift columns right, left
+  0,G      - go to upper left, lower right table corner 
+  n,u      - next, previous page of records
+  @        - scroll current row to the top
+
+  s,S      - sort ascending, descending by current column
+  f        - filter (enter claus after where ... )
+  X        - reset view (filter, sort) on current table
+
+  m, i     - move rows view by 1 page down (tables list)
+  e        - edit current cell 
+  d        - delete current row
+  a        - add new row
+
 """
 
 sql_tab_cols = {"sqlite": "", "mysql": "", "postgres": "", "oracle": ""}
